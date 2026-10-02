@@ -1,0 +1,315 @@
+.app {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px 32px;
+}
+
+/* ---------------------------------------------------------- cabeçalho */
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 16px 24px;
+  flex-wrap: wrap;
+  padding: 18px 0 16px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+}
+.brand__logo {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  padding: 3px;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-2);
+}
+.brand__rail {
+  fill: var(--steel);
+}
+.brand__cable {
+  stroke: var(--c-compare);
+  stroke-width: 1.5;
+}
+.brand__claw {
+  stroke: var(--c-compare);
+  stroke-width: 1.8;
+  fill: none;
+}
+.brand__box {
+  fill: var(--box-border);
+}
+.brand__box--a,
+.brand__box--b {
+  fill: var(--c-compare);
+}
+.brand__name {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.brand__name span {
+  color: var(--accent);
+}
+.brand__tagline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.view-switch {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+}
+.view-switch button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.view-switch button:hover {
+  color: var(--text);
+}
+.view-switch button.is-active {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  outline: none;
+}
+
+.app-footer {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
+/* ---------------------------------------------------------- painéis */
+.panel {
+  position: relative;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  min-width: 0;
+}
+.panel::before {
+  /* marcas de canto, como em uma prancha técnica */
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border-radius: calc(var(--radius-lg) - 6px);
+  pointer-events: none;
+  background:
+    linear-gradient(var(--border-strong), var(--border-strong)) top left / 10px 1px no-repeat,
+    linear-gradient(var(--border-strong), var(--border-strong)) top left / 1px 10px no-repeat,
+    linear-gradient(var(--border-strong), var(--border-strong)) bottom right / 10px 1px no-repeat,
+    linear-gradient(var(--border-strong), var(--border-strong)) bottom right / 1px 10px no-repeat;
+  opacity: 0.8;
+}
+.panel__header {
+  display: flex;
+  align-items: center;
+  gap: 8px 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.panel__title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.panel__actions {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+/* ---------------------------------------------------------- controles */
+.controls__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  align-items: flex-end;
+}
+.controls__grid > * {
+  flex: 1 1 180px;
+}
+.controls__grid > .count-control {
+  flex: 1 1 210px;
+}
+.controls__grid > .controls__sequence {
+  flex: 2 1 330px;
+}
+.controls__grid > .segmented {
+  flex: 0 0 auto;
+}
+.controls__grid .segmented__options {
+  flex-wrap: nowrap;
+}
+.count-control__row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.count-control__input {
+  width: 64px;
+  min-height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--surface-solid);
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 600;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.count-control__input::-webkit-outer-spin-button,
+.count-control__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.count-control .range {
+  margin-top: 2px;
+}
+.controls .field__row .select {
+  flex: 1 1 130px;
+}
+
+.manual-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border-strong);
+}
+.manual-input__hint {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.manual-input__hint code {
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--code-bg);
+}
+.manual-input__row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.manual-input__error {
+  color: var(--c-swap);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------------------------------------------------------- laboratório */
+.lab {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.lab__study {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 16px;
+}
+.lab__extras {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+/* ---------------------------------------------------------- responsivo */
+@media (max-width: 860px) {
+  .lab__study {
+    grid-template-columns: 1fr;
+  }
+  /* No celular, a explicação vem antes do código. */
+  .lab__study .explain {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 0 12px 140px;
+  }
+  .app-header {
+    padding-top: 12px;
+    gap: 12px;
+  }
+  .brand__name {
+    font-size: 18px;
+  }
+  .brand__tagline {
+    display: none;
+  }
+  .view-switch {
+    order: 3;
+    width: 100%;
+  }
+  .view-switch button {
+    flex: 1;
+    justify-content: center;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .toggle span:not(.toggle__switch) {
+    display: none;
+  }
+  .controls__grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .controls__grid > * {
+    flex: none;
+  }
+  .controls__grid .segmented__options {
+    flex-wrap: wrap;
+  }
+  .panel {
+    padding: 12px;
+    border-radius: var(--radius);
+  }
+}

@@ -1,0 +1,119 @@
+/* ------------------------------------------------------------------
+   Design tokens — tema escuro (padrão, "blueprint noturno") e claro
+   ("papel de projeto"). Toda cor da interface vem daqui.
+   ------------------------------------------------------------------ */
+:root {
+  --font-ui: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --radius-lg: 16px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  color-scheme: dark;
+}
+
+:root,
+:root[data-theme='dark'] {
+  --bg: #050e1f;
+  --bg-2: #08172e;
+  --surface: rgba(12, 29, 55, 0.72);
+  --surface-2: rgba(17, 39, 72, 0.85);
+  --surface-solid: #0b1c36;
+  --border: rgba(122, 176, 255, 0.15);
+  --border-strong: rgba(122, 176, 255, 0.32);
+  --grid-minor: rgba(98, 158, 255, 0.06);
+  --grid-major: rgba(98, 158, 255, 0.13);
+
+  --text: #e6f0ff;
+  --text-muted: #9ab0cf;
+  --text-faint: #6a83a6;
+
+  --accent: #4cc4ff;
+  --accent-strong: #16a6f0;
+  --accent-contrast: #021325;
+
+  --c-compare: #38d6ff;
+  --c-swap: #ff5f7e;
+  --c-move: #ff9a5c;
+  --c-pivot: #ffc247;
+  --c-sorted: #3ee6a3;
+  --c-held: #b48cff;
+  --c-range: #6f9bff;
+  --c-right: #d68cff;
+
+  --box-fill: #0d2240;
+  --box-border: #4a74a8;
+  --box-text: #d9e8ff;
+
+  --stage-bg: #061329;
+  --stage-glow: rgba(56, 140, 255, 0.12);
+  --steel: #8fb3dd;
+  --steel-1: #2a4a74;
+  --steel-2: #183252;
+  --steel-line: rgba(160, 200, 255, 0.16);
+  --floor: rgba(120, 180, 255, 0.45);
+
+  --code-bg: rgba(4, 12, 26, 0.78);
+  --code-active: rgba(76, 196, 255, 0.12);
+  --tok-kw: #ff8fb1;
+  --tok-num: #ffc66d;
+  --tok-fn: #7fd6ff;
+  --tok-comment: #6f88aa;
+
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --focus: #ffd166;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #e9f1fb;
+  --bg-2: #f5f9fe;
+  --surface: rgba(255, 255, 255, 0.82);
+  --surface-2: rgba(255, 255, 255, 0.95);
+  --surface-solid: #ffffff;
+  --border: rgba(24, 64, 128, 0.14);
+  --border-strong: rgba(24, 64, 128, 0.28);
+  --grid-minor: rgba(30, 90, 180, 0.06);
+  --grid-major: rgba(30, 90, 180, 0.12);
+
+  --text: #0c2142;
+  --text-muted: #46607f;
+  --text-faint: #6b7f99;
+
+  --accent: #0a74c2;
+  --accent-strong: #075f9f;
+  --accent-contrast: #ffffff;
+
+  --c-compare: #0484b8;
+  --c-swap: #d42d52;
+  --c-move: #c75a14;
+  --c-pivot: #a86d00;
+  --c-sorted: #0b8a5b;
+  --c-held: #6d3fd1;
+  --c-range: #2f58c9;
+  --c-right: #9b3fc4;
+
+  --box-fill: #ffffff;
+  --box-border: #7895bd;
+  --box-text: #0c2142;
+
+  --stage-bg: #f3f8ff;
+  --stage-glow: rgba(60, 130, 230, 0.1);
+  --steel: #4f6f99;
+  --steel-1: #c9d8ec;
+  --steel-2: #a9bfdc;
+  --steel-line: rgba(40, 80, 140, 0.18);
+  --floor: rgba(40, 90, 170, 0.45);
+
+  --code-bg: #f4f8fd;
+  --code-active: rgba(10, 116, 194, 0.12);
+  --tok-kw: #b8226b;
+  --tok-num: #a35d00;
+  --tok-fn: #0a6aa8;
+  --tok-comment: #6b7f99;
+
+  --shadow: 0 10px 28px rgba(20, 50, 100, 0.12);
+  --focus: #b35c00;
+}

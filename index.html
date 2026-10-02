@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Algorithm Sorting Lab: visualize passo a passo, com animações físicas, como funcionam Bubble Sort, Quick Sort, Selection Sort, Insertion Sort, Merge Sort e Heap Sort." />
+    <meta name="theme-color" content="#061024" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Algorithm Sorting Lab</title>
+    <script>
+      // Aplica o tema salvo antes da primeira pintura (evita "piscar").
+      try {
+        var saved = JSON.parse(localStorage.getItem('asl:theme'));
+        var theme = saved === 'light' || saved === 'dark' ? saved : matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <noscript>O Algorithm Sorting Lab precisa de JavaScript para funcionar.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
